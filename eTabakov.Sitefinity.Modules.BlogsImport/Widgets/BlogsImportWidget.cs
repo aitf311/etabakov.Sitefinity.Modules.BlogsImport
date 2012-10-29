@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.IO;
 using System.Linq;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -253,7 +254,15 @@ namespace eTabakov.Sitefinity.Modules.BlogsImport.Widgets
         {
             if (fuBlogsData.HasFile)
             {
-            	
+                fuBlogsData.SaveAs("E:/tmp.xml");
+                using (FileStream reader = File.OpenRead("E:/tmp.xml"))
+                {
+                    using (StreamReader r = new StreamReader(reader))
+                    {
+                        BloggerMigrationProvider pr = new BloggerMigrationProvider();
+                        pr.MigrateBlogs(r);
+                    }
+                }
             }
         }
         #endregion

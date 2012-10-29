@@ -68,6 +68,13 @@
       <HintPath>bin\AjaxControlToolkit.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.Http">
+      <HintPath>C:\SocialSites\Main\Source\Reference Assemblies\Telerik\Sitefinity\5.2.3700\Microsoft.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Http.Extensions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\SocialSites\Main\Source\Reference Assemblies\Telerik\Sitefinity\5.2.3700\Microsoft.Http.Extensions.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Newtonsoft.Json.dll</HintPath>
@@ -275,6 +282,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Telerik.Sitefinity.Services.Documents.Impl.dll</HintPath>
       <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Sitefinity.Services.Statistics">
+      <HintPath>C:\SocialSites\Main\Source\Reference Assemblies\Telerik\Sitefinity\5.2.3700\Telerik.Sitefinity.Services.Statistics.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Sitefinity.Services.Statistics.Impl">
       <SpecificVersion>False</SpecificVersion>
@@ -541,8 +551,8 @@
     </Content>
     <None Include="App_Data\blog-10-21-2012.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>blog-10-21-2012.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>blog-10-21-2012.Designer.cs</LastGenOutput>
     </None>
     <Content Include="App_Data\blog-10-21-2012.xss">
       <DependentUpon>blog-10-21-2012.xsd</DependentUpon>

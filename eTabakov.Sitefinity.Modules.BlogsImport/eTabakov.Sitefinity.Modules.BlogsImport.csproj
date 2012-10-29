@@ -55,6 +55,9 @@
     <Reference Include="Telerik.Sitefinity">
       <HintPath>..\WebApp\bin\Telerik.Sitefinity.dll</HintPath>
     </Reference>
+    <Reference Include="Telerik.Sitefinity.ContentModules">
+      <HintPath>..\WebApp\bin\Telerik.Sitefinity.ContentModules.dll</HintPath>
+    </Reference>
     <Reference Include="Telerik.Sitefinity.Model">
       <HintPath>..\WebApp\bin\Telerik.Sitefinity.Model.dll</HintPath>
     </Reference>
@@ -70,6 +73,10 @@
     <Compile Include="BlogsImportConfig.cs" />
     <Compile Include="BlogsImportResources.cs" />
     <Compile Include="BlogsMigrationProvider\BloggerMigrationProvider.cs" />
+    <Compile Include="BlogsMigrationProvider\BloggerMigration\DataObjects\Author.cs" />
+    <Compile Include="BlogsMigrationProvider\BloggerMigration\DataObjects\Category.cs" />
+    <Compile Include="BlogsMigrationProvider\BloggerMigration\DataObjects\Entry.cs" />
+    <Compile Include="BlogsMigrationProvider\BloggerMigration\DataObjects\Feed.cs" />
     <Compile Include="BlogsMigrationProvider\BlogsProviderFactory.cs" />
     <Compile Include="BlogsMigrationProvider\IBlogsMigrationProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -96,6 +103,7 @@
   <ItemGroup>
     <EmbeddedResource Include="Widgets\Designer\BlogsImportWidgetDesigner.js" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
