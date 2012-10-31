@@ -8,6 +8,7 @@ using Telerik.Sitefinity.Blogs.Model;
 using Telerik.Sitefinity.Modules.Blogs;
 using Telerik.Sitefinity.Workflow;
 using eTabakov.Sitefinity.Modules.BlogsImport.BlogsMigrationProvider.BloggerMigration.DataObjects;
+using Telerik.Sitefinity.GenericContent.Model;
 
 namespace eTabakov.Sitefinity.Modules.BlogsImport.BlogsMigrationProvider
 {
@@ -42,9 +43,17 @@ namespace eTabakov.Sitefinity.Modules.BlogsImport.BlogsMigrationProvider
                 bag.Add("ContentType", typeof(BlogPost).FullName);
                 WorkflowManager.MessageWorkflow(blogPost.Id, typeof(BlogPost), null, "Publish", false, bag);
 
+                BlogPost livePost = blogsManager.GetLive(blogPost);
+
                 foreach (Entry cmmnt in feed.Entry.Where(en => en.Categories.Any(c => c.CategoryType == CategoryType.Comment) && en.ReplyTo != null && en.ReplyTo.Id == post.Id))
                 {
-                    
+                    Comment comment = blogsManager.CreateComment(livePost);
+                    comment.AuthorName = cmmnt.Author.Name;
+                    comment.Email = cmmnt.Author.Email;
+                    comment.Content = cmmnt.Content;
+                    comment.DateCreated = cmmnt.Published;
+
+                    blogsManager.SaveChanges();
                 }
             }            
         }

@@ -27,7 +27,7 @@ namespace eTabakov.Sitefinity.Modules.BlogsImport.BlogsMigrationProvider.Blogger
         [XmlElement("author")]
         public Author Author { get; set; }
 
-        [XmlElement(ElementName = "in-reply-to", Namespace = "thr", Type = typeof(ReplyTo), IsNullable = true)]
+        [XmlElement(ElementName = "in-reply-to", Namespace = "http://purl.org/syndication/thread/1.0", Type = typeof(ReplyTo), IsNullable = true)]
         public ReplyTo ReplyTo { get; set; }
     }
 
