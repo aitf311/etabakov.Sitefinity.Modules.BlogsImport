@@ -388,16 +388,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Data\blog-10-21-2012.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>blog-10-21-2012.xsd</DependentUpon>
-    </Compile>
     <Compile Include="AzureWebRole.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\blog-10-21-2012.xml" />
     <Content Include="ClientBin\Telerik.Sitefinity.Analytics.xap" />
     <Content Include="ClientBin\Telerik.Sitefinity.Silverlight.xap" />
     <Content Include="Default.aspx" />
@@ -544,19 +538,6 @@
     <Content Include="App_Data\Sitefinity\Configuration\ToolboxesConfig.config" />
     <Content Include="App_Data\Sitefinity\Configuration\VirtualPathSettingsConfig.config" />
     <Content Include="App_Data\Sitefinity\Configuration\WorkflowConfig.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="App_Data\blog-10-21-2012.xsc">
-      <DependentUpon>blog-10-21-2012.xsd</DependentUpon>
-    </Content>
-    <None Include="App_Data\blog-10-21-2012.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <SubType>Designer</SubType>
-      <LastGenOutput>blog-10-21-2012.Designer.cs</LastGenOutput>
-    </None>
-    <Content Include="App_Data\blog-10-21-2012.xss">
-      <DependentUpon>blog-10-21-2012.xsd</DependentUpon>
-    </Content>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

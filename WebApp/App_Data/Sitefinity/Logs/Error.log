@@ -1,0 +1,186 @@
+----------------------------------------
+Timestamp: 10/31/2012 5:41:09 PM
+
+Message: HandlingInstanceID: e27d84e2-67d8-45c4-a894-2fddf8529238
+An exception of type 'System.Security.Cryptography.CryptographicException' occurred and was caught.
+---------------------------------------------------------------------------------------------------
+10/31/2012 19:41:09
+Type : System.Security.Cryptography.CryptographicException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : Bad Data.
+
+Source : mscorlib
+Help link : 
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ThrowCryptographicException(Int32)
+HResult : -2146893819
+Stack Trace :    at System.Security.Cryptography.CryptographicException.ThrowCryptographicException(Int32 hr)
+   at System.Security.Cryptography.Utils._DecryptData(SafeKeyHandle hKey, Byte[] data, Int32 ib, Int32 cb, Byte[]& outputBuffer, Int32 outputOffset, PaddingMode PaddingMode, Boolean fDone)
+   at System.Security.Cryptography.CryptoAPITransform.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   at System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   at System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   at System.IO.Stream.Close()
+   at Telerik.Sitefinity.Security.SecurityManager.DecryptData(Byte[] data)
+   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ApplyTransforms(Byte[] cookie, Boolean outbound)
+   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ReadToken(XmlReader reader, SecurityTokenResolver tokenResolver)
+   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ReadToken(Byte[] token, SecurityTokenResolver tokenResolver)
+   at Telerik.Sitefinity.Security.Claims.SitefinitySessionAuthenticationModule.ReadToken(Byte[] sessionCookie)
+
+Additional Info:
+
+MachineName : ETABAKOV
+TimeStamp : 10/31/2012 5:41:09 PM
+FullName : Telerik.Sitefinity.Utilities, Version=5.2.3700.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/3/ROOT-2-129961788533262437
+ThreadIdentity : 
+WindowsIdentity : TELERIK\etabakov
+Requested URL : http://localhost:9091/Telerik.Web.UI.WebResource.axd?_TSM_HiddenField_=ctl05_TSM&compress=0&_TSM_CombinedScripts_=;;Telerik.Web.UI,+Version=2012.2.607.40,+Culture=neutral,+PublicKeyToken=121fae78165ba3d4:en:767fb6c3-728b-40e9-af4d-abc498bcae6e:16e4e7cd:f7645509:24ee1bba:e330518b:2003d0b8:1e771326:c8618e41;Telerik.Sitefinity,+Version=5.2.3700.0,+Culture=neutral,+PublicKeyToken=b28c218413bdf563:en:76dda9a0-1b3c-49ef-98bd-d5515d7264c5:721addc;+Telerik.Sitefinity.ContentModules:en:d9fa1535-8bbc-4cf4-bfbb-10f1a9eb8e78:7f8468cc;Telerik.Sitefinity,+Version=5.2.3700.0,+Culture=neutral,+PublicKeyToken=b28c218413bdf563:en:76dda9a0-1b3c-49ef-98bd-d5515d7264c5:1ebfe79c:688a162a;Telerik.Sitefinity.Resources:en:7526f5a2-dd07-427c-841a-f2470a169229:64f47370;Telerik.Sitefinity,+Version=5.2.3700.0,+Culture=neutral,+PublicKeyToken=b28c218413bdf563:en:76dda9a0-1b3c-49ef-98bd-d5515d7264c5:7623e2de:98b87b05:fad57923:26ae39e6:2cb7f38d:5f4a9e32:4e54943:7f93e294:98051038:b09fa3ae:8f82f6b6:fe4b1370:aa9a9de0:bb0a41ef;Telerik.Web.UI,+Version=2012.2.607.40,+Culture=neutral,+PublicKeyToken=121fae78165ba3d4:en:767fb6c3-728b-40e9-af4d-abc498bcae6e:f46195d3:874f8ea2:19620875:490a9d4e:bd8f85e4:58366029;Telerik.Sitefinity,+Version=5.2.3700.0,+Culture=neutral,+PublicKeyToken=b28c218413bdf563:en:76dda9a0-1b3c-49ef-98bd-d5515d7264c5:ee25fa49;Telerik.Sitefinity.Resources,+Version=5.2.3700.0,+Culture=neutral,+PublicKeyToken=null:en:7526f5a2-dd07-427c-841a-f2470a169229:1077b7cd;Telerik.Sitefinity,+Version=5.2.3700.0,+Culture=neutral,+PublicKeyToken=b28c218413bdf563:en:76dda9a0-1b3c-49ef-98bd-d5515d7264c5:4a73a146:308ff405:80c147f:f77740f1:26cfb6dc:6e04508f;Telerik.Sitefinity.Resources:en:7526f5a2-dd07-427c-841a-f2470a169229:c4ef6dcd:6f03d72a
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 9010
+
+Severity: Warning
+
+Title:Enterprise Library Exception Handling
+
+Machine: ETABAKOV
+
+App Domain: /LM/W3SVC/3/ROOT-2-129961788533262437
+
+ProcessId: 10592
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:10428
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 10/31/2012 5:41:09 PM
+
+Message: HandlingInstanceID: 8645ddc3-cf2b-4faa-87bf-061be2f4c602
+An exception of type 'System.Security.Cryptography.CryptographicException' occurred and was caught.
+---------------------------------------------------------------------------------------------------
+10/31/2012 19:41:09
+Type : System.Security.Cryptography.CryptographicException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : Bad Data.
+
+Source : mscorlib
+Help link : 
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ThrowCryptographicException(Int32)
+HResult : -2146893819
+Stack Trace :    at System.Security.Cryptography.CryptographicException.ThrowCryptographicException(Int32 hr)
+   at System.Security.Cryptography.Utils._DecryptData(SafeKeyHandle hKey, Byte[] data, Int32 ib, Int32 cb, Byte[]& outputBuffer, Int32 outputOffset, PaddingMode PaddingMode, Boolean fDone)
+   at System.Security.Cryptography.CryptoAPITransform.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   at System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   at System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   at System.IO.Stream.Close()
+   at Telerik.Sitefinity.Security.SecurityManager.DecryptData(Byte[] data)
+   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ApplyTransforms(Byte[] cookie, Boolean outbound)
+   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ReadToken(XmlReader reader, SecurityTokenResolver tokenResolver)
+   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ReadToken(Byte[] token, SecurityTokenResolver tokenResolver)
+   at Telerik.Sitefinity.Security.Claims.SitefinitySessionAuthenticationModule.ReadToken(Byte[] sessionCookie)
+
+Additional Info:
+
+MachineName : ETABAKOV
+TimeStamp : 10/31/2012 5:41:09 PM
+FullName : Telerik.Sitefinity.Utilities, Version=5.2.3700.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/3/ROOT-2-129961788533262437
+ThreadIdentity : 
+WindowsIdentity : TELERIK\etabakov
+Requested URL : http://localhost:9091/Telerik.Web.UI.WebResource.axd?compress=0&_TSM_CombinedScripts_=;;Telerik.Sitefinity.Resources,+Version=5.2.3700.0,+Culture=neutral,+PublicKeyToken=null:en:7526f5a2-dd07-427c-841a-f2470a169229:5aa8d08c:62c62c5e:c0717fa6:636f7c84:d1d3c557:cc007e78:e5e8fcea:f8088da1:acee697:a7043959:e0280525:44911412;Telerik.Web.UI,+Version=2012.2.607.40,+Culture=neutral,+PublicKeyToken=121fae78165ba3d4:en:767fb6c3-728b-40e9-af4d-abc498bcae6e:ed2942d4:92753c09:91f742eb:9e1572d6;Telerik.Web.UI.Skins,+Version=2012.2.607.40,+Culture=neutral,+PublicKeyToken=121fae78165ba3d4:en:4b54c6d7-e7a5-482b-9e15-94b493c9591a:7d245c43:ecd3dcdf
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 9010
+
+Severity: Warning
+
+Title:Enterprise Library Exception Handling
+
+Machine: ETABAKOV
+
+App Domain: /LM/W3SVC/3/ROOT-2-129961788533262437
+
+ProcessId: 10592
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:11676
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 10/31/2012 5:41:09 PM
+
+Message: HandlingInstanceID: 3c4ba013-4f1d-416a-888e-5b8303b34b7a
+An exception of type 'System.Security.Cryptography.CryptographicException' occurred and was caught.
+---------------------------------------------------------------------------------------------------
+10/31/2012 19:41:09
+Type : System.Security.Cryptography.CryptographicException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : Bad Data.
+
+Source : mscorlib
+Help link : 
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ThrowCryptographicException(Int32)
+HResult : -2146893819
+Stack Trace :    at System.Security.Cryptography.CryptographicException.ThrowCryptographicException(Int32 hr)
+   at System.Security.Cryptography.Utils._DecryptData(SafeKeyHandle hKey, Byte[] data, Int32 ib, Int32 cb, Byte[]& outputBuffer, Int32 outputOffset, PaddingMode PaddingMode, Boolean fDone)
+   at System.Security.Cryptography.CryptoAPITransform.TransformFinalBlock(Byte[] inputBuffer, Int32 inputOffset, Int32 inputCount)
+   at System.Security.Cryptography.CryptoStream.FlushFinalBlock()
+   at System.Security.Cryptography.CryptoStream.Dispose(Boolean disposing)
+   at System.IO.Stream.Close()
+   at Telerik.Sitefinity.Security.SecurityManager.DecryptData(Byte[] data)
+   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ApplyTransforms(Byte[] cookie, Boolean outbound)
+   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ReadToken(XmlReader reader, SecurityTokenResolver tokenResolver)
+   at Microsoft.IdentityModel.Tokens.SessionSecurityTokenHandler.ReadToken(Byte[] token, SecurityTokenResolver tokenResolver)
+   at Telerik.Sitefinity.Security.Claims.SitefinitySessionAuthenticationModule.ReadToken(Byte[] sessionCookie)
+
+Additional Info:
+
+MachineName : ETABAKOV
+TimeStamp : 10/31/2012 5:41:09 PM
+FullName : Telerik.Sitefinity.Utilities, Version=5.2.3700.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/3/ROOT-2-129961788533262437
+ThreadIdentity : 
+WindowsIdentity : TELERIK\etabakov
+Requested URL : http://localhost:9091/Telerik.Web.UI.WebResource.axd?_TSM_HiddenField_=ctl05_TSM&compress=0&_TSM_CombinedScripts_=;;System.Web.Extensions,+Version=4.0.0.0,+Culture=neutral,+PublicKeyToken=31bf3856ad364e35:en:c9cbdec3-c810-4e87-846c-fb25a7c08002:ea597d4b:b25378d2
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 9010
+
+Severity: Warning
+
+Title:Enterprise Library Exception Handling
+
+Machine: ETABAKOV
+
+App Domain: /LM/W3SVC/3/ROOT-2-129961788533262437
+
+ProcessId: 10592
+
+Process Name: c:\windows\system32\inetsrv\w3wp.exe
+
+Thread Name: 
+
+Win32 ThreadId:8172
+
+Extended Properties: 
+----------------------------------------
