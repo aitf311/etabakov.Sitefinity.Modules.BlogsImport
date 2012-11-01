@@ -1,2 +1,0 @@
-﻿<%@ ServiceHost Language="C#" Debug="true" Factory="Telerik.Sitefinity.Web.Services.WcfHostFactory"
-    Service="eTabakov.Sitefinity.BlogsImporter.BlogsImporterModuleBasicSettingsService"%>
