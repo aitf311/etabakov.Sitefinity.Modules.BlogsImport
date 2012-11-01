@@ -9,6 +9,8 @@ using Telerik.Sitefinity.Modules.Blogs;
 using Telerik.Sitefinity.Workflow;
 using eTabakov.Sitefinity.Modules.BlogsImport.BlogsMigrationProvider.BloggerMigration.DataObjects;
 using Telerik.Sitefinity.GenericContent.Model;
+using Telerik.Sitefinity.Taxonomies;
+using Telerik.Sitefinity.Taxonomies.Model;
 
 namespace eTabakov.Sitefinity.Modules.BlogsImport.BlogsMigrationProvider
 {
@@ -53,6 +55,26 @@ namespace eTabakov.Sitefinity.Modules.BlogsImport.BlogsMigrationProvider
                     comment.Content = cmmnt.Content;
                     comment.DateCreated = cmmnt.Published;
 
+                    blogsManager.SaveChanges();
+                }
+
+                TaxonomyManager taxonomyManager = new TaxonomyManager();
+                var tax = taxonomyManager.GetTaxonomies<FlatTaxonomy>().Where(t => t.Name == "Tags").SingleOrDefault();
+
+                foreach (Category tag in post.Categories.Where(c => c.CategoryType == CategoryType.Unknown))
+                {
+                    var taxon = taxonomyManager.GetTaxa<FlatTaxon>().Where(t => t.Title == tag.Term).FirstOrDefault();
+                    if (taxon == null)
+                    {
+                        taxon = taxonomyManager.CreateTaxon<FlatTaxon>();
+                        taxon.Name = tag.Term;
+                        taxon.Title = tag.Term;
+
+                        tax.Taxa.Add(taxon);
+                        taxonomyManager.SaveChanges();
+                    }
+
+                    blogPost.Organizer.AddTaxa("Tags", taxon.Id);
                     blogsManager.SaveChanges();
                 }
             }            
